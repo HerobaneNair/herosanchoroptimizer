@@ -5,8 +5,7 @@
 	"name": "HerosAnchorOptimizer",
 	"description": "Optimization that fixes waiting on the server after anchor explosion before anchor block is removed. Replaces it with translucent ghost anchor to not change functionality of airplacing.",
 	"authors": [
-		"HerobaneNair",
-		"HerobaneNair (again)"
+		"HerobaneNair"
 	],
 	"contact": {
 		"homepage": "https://discord.gg/4ta7pM4bnr",
@@ -14,29 +13,16 @@
 	},
 	"license": "MIT",
 	"icon": "assets/herosanchoroptimizer/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
-			"me.herobane.HerosAnchorOptimizer"
-		],
 		"client": [
 			"me.herobane.HerosAnchorOptimizerClient"
 		]
 	},
-	"mixins": [
-		"herosanchoroptimizer.mixins.json",
-		{
-			"config": "herosanchoroptimizer.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.16.5",
 		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }

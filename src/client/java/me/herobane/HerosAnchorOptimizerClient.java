@@ -13,17 +13,11 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 public class HerosAnchorOptimizerClient implements ClientModInitializer {
-	public static final Logger LOGGER = LoggerFactory.getLogger("heros_anchor_optimizer");
-
 	@Override
 	public void onInitializeClient() {
-		LOGGER.info("Hello HerobaneNair's Anchor Optimizer");
-
 		// Set block render layers for custom blocks
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FAKE_ANCHOR, RenderLayer.getTranslucent());
 

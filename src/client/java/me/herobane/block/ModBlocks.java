@@ -1,6 +1,5 @@
 package me.herobane.block;
 
-import me.herobane.HerosAnchorOptimizer;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -22,11 +21,11 @@ public class ModBlocks {
     // Helper methods for adding blocks
     private static Block registerBlock(Block block) {
         registerBlockItem(block);
-        return Registry.register(Registries.BLOCK, Identifier.of(HerosAnchorOptimizer.MOD_ID, "fake_anchor"), block);
+        return Registry.register(Registries.BLOCK, Identifier.of("herosanchoroptimizer", "fake_anchor"), block);
     }
 
     private static void registerBlockItem(Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(HerosAnchorOptimizer.MOD_ID, "fake_anchor"),
+        Registry.register(Registries.ITEM, Identifier.of("herosanchoroptimizer", "fake_anchor"),
                 new BlockItem(block, new Item.Settings()));
     }
 }
